@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react';
 
 export const Statistics = ({
   good,
   neutral,
   bad,
   total,
-  positivePercentage
+  positivePercentage,
 }) => {
   return (
     <ul>
@@ -15,5 +15,5 @@ export const Statistics = ({
       <li>Total: {total}</li>
       <li>Positive feedback: {Math.ceil(positivePercentage)}%</li>
     </ul>
-  )
-}
+  );
+};

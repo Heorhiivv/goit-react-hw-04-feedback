@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
-import { Buttons } from '../Buttons/Buttons'
-export class FeedbackOptions extends Component {
-  getStat = (evt) => {
-    const name = evt.currentTarget.name
-    this.props.onLeaveFeedback(name)
-  }
-  render() {
-    const { options } = this.props
-    return <Buttons options={options} getStat={this.getStat} />
-  }
-}
+import React, { Component } from 'react';
+import { Buttons } from '../Buttons/Buttons';
+const options = ['good', 'neutral', 'bad'];
+
+export const FeedbackOptions = ({ onLeaveFeedback }) => {
+  const getStat = evt => {
+    const name = evt.currentTarget.name;
+    onLeaveFeedback(name);
+  };
+
+  return <Buttons options={options} getStat={getStat} />;
+};
